@@ -1,7 +1,5 @@
 #!/usr/bin/python
 
-"""This example is based on this video: https://www.youtube.com/watch?v=_C4H2gBdyQY"""
-
 from mininet.net import Mininet
 from mininet.node import Controller,OVSKernelSwitch
 from mininet.link import TCLink
@@ -15,7 +13,7 @@ def topology():
 
     print "*** Creating nodes"
     sta1 = net.addStation( 'sta1', wlans=2, ip='10.0.0.2/8', max_x=120, max_y=50, min_v=1.4, max_v=1.6 )
-	sta2 = net.addStation( 'sta2', ip='10.0.0.3/8', position='40,35,0')
+    sta2 = net.addStation( 'sta2', ip='10.0.0.3/8', position='40,35,0')
     h1 = net.addHost( 'h1', mac='00:00:00:00:00:01', ip='10.0.0.1/8' )
     ap1 = net.addAccessPoint( 'ap1', ssid='ssid_ap1', mode= 'g', channel=6, position='70,25,0' )
     ap2 = net.addAccessPoint( 'ap2', ssid='ssid_ap2', mode= 'g', channel=1, position='30,25,0' )
